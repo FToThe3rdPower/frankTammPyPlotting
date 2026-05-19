@@ -104,7 +104,7 @@ ax.set_ylabel(r"$\dfrac{d^2 N}{dx\,d\lambda}$   (photons cm$^{-1}$ nm$^{-1}$)",
               fontsize=12)
 ax.set_title(
     f"Cherenkov spectrum in {medium_label}\n"
-    rf"$n = 1.33$, $z={z}$, $\beta={beta:g}$  —  (Франк & Тамм 1937)",
+    rf"$n \approx 1.33$, $z={z}$, $\beta={beta:g}$  —  (Франк & Тамм 1937)",
     fontsize=12,
 )
 ax.set_xlim(lam_nm[0], lam_nm[-1])
