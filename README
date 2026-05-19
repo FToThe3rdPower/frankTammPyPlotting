@@ -1,0 +1,1 @@
+This code is to estimate the number of a Cherenkov photons of a wavelength within the visual spectrum per cm of a medium. The default medium is water with z = β = 1.0, but these can be adjusted.
