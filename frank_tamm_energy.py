@@ -51,7 +51,7 @@ ax.plot(E_eV, dN_dxdE, lw=2.6, color="#0b1d3a", zorder=3)
 ax.fill_between(E_eV, 0, dN_dxdE, alpha=0.10, color="#0b1d3a", zorder=2)
 
 ax.set_xlabel(r"Photon energy  $E$  [eV]", fontsize=12)
-ax.set_ylabel(r"$d^2N/(dx\,dE)$   [photons cm$^{-1}$ eV$^{-1}$]", fontsize=12)
+ax.set_ylabel(r"$\frac{d^2\mathsf{N}_\gamma}{dx\,dE}$   [$\frac{\mathsf{photons}}{\mathsf{cm} \cdot \mathsf{eV}}$]", fontsize=19)
 ax.set_xlim(E_min, E_max)
 ax.set_ylim(0, y_top)
 ax.grid(alpha=0.3, zorder=1)

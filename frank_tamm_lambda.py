@@ -99,9 +99,9 @@ ax.imshow(
 # Curve on top
 ax.plot(lam_nm, dN_dxdlam, lw=2.4, color="#0b1d3a", zorder=3)
 
-ax.set_xlabel(r"Wavelength  $\lambda$  (nm)", fontsize=12)
-ax.set_ylabel(r"$\dfrac{d^2 N}{dx\,d\lambda}$   (photons cm$^{-1}$ nm$^{-1}$)",
-              fontsize=12)
+ax.set_xlabel(r"Wavelength  $\lambda$  [nm]", fontsize=12)
+ax.set_ylabel(r"$\dfrac{d^2 \mathsf{N}_\gamma}{dx\,d\lambda}$   [$\frac{\mathsf{photons}}{\mathsf{cm} \cdot \mathsf{nm}}$]",
+              fontsize=14)
 ax.set_title(
     f"Cherenkov spectrum in {medium_label}\n"
     rf"$n \approx 1.33$, $z={z}$, $\beta={beta:g}$  —  (Франк & Тамм 1937)",
@@ -127,11 +127,11 @@ mask = (lam_nm >= uvEdge) & (lam_nm <= irEdge)
 N_vis = np.trapezoid(dN_dxdlam[mask], lam_nm[mask])
 ax.text(
     0.97, 0.95,
-    f"∫({uvEdge}–{irEdge} nm) ≈ {N_vis:.0f} photons / cm",
+    f"∫({uvEdge}–{irEdge} [nm]) ≈ {N_vis:.0f} [photons / cm]",
     transform=ax.transAxes, ha="right", va="top", fontsize=10,
     bbox=dict(boxstyle="round,pad=0.4", fc="white", ec="#999", alpha=0.92),
     zorder=5,
 )
 
 plt.tight_layout()
-print(f"Integrated {uvEdge}-{irEdge} nm: {N_vis:.1f} photons/cm")
+print(f"Integrated {uvEdge}-{irEdge} [nm]: {N_vis:.1f} [photons/cm]")
